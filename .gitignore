@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# 학습 산출물 / 데이터셋 — repo에 안 올림
+checkpoints/
+outputs/
+data/
+datasets/
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# 영상/대용량 — 단, inference_results/ 의 데모 영상은 예외
+*.mp4
+*.avi
+*.mov
+*.npz
+*.h5
+*.parquet
+!inference_results/**/*.mp4
+!inference_results/**/*.gif
+
+# 로컬 환경
+.env
+.env.local
