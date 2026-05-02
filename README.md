@@ -4,17 +4,19 @@
 
 ---
 
-## ▶︎ 결과 — 2026-03-25 09:06 ~ 09:07 세션 3 회 연속 성공
+## ▶︎ 결과 — 2026-03-25 09:06 성공 데모
 
-| ep01 (09:06:11) | ep02 (09:06:38) | ep03 (09:07:05) |
-|:--:|:--:|:--:|
-| ![ep01](inference_results/ep01_20260325_090611.gif) | ![ep02](inference_results/ep02_20260325_090638.gif) | ![ep03](inference_results/ep03_20260325_090705.gif) |
-| ~19.6 s | ~19.7 s | ~19.7 s |
-| [mp4](inference_results/ep01_20260325_090611.mp4) | [mp4](inference_results/ep02_20260325_090638.mp4) | [mp4](inference_results/ep03_20260325_090705.mp4) |
+![success demo](inference_results/ep01_20260325_090611.gif)
 
-> 좌측 절반은 up 카메라(위에서 내려다봄), 우측 절반은 side 카메라. 원본 mp4 (1280×480 30 fps) 도 같은 디렉토리에 있어 GitHub UI에서 mp4 링크를 클릭하면 정상 속도로 재생됩니다.
->
-> **핵심**: 같은 모델·같은 세션·같은 프롬프트 (`Grasp the toothpaste box and lift it up`) 로 3 회 연속 grasp + lift 성공 — 한 번이 아니라 **일관된 성공률**.
+| 항목 | 값 |
+|------|-----|
+| 파일 | `inference_results/ep01_20260325_090611.mp4` (1280×480 composite, 30 fps, ~19.6 s) |
+| 미리보기 GIF | `inference_results/ep01_20260325_090611.gif` (480w 12 fps) |
+| 정책 | `outputs/train/toothpaste_from_20k/checkpoints/last` |
+| 프롬프트 | `"Grasp the toothpaste box and lift it up"` |
+| 추론 환경 | Mac MPS, run_policy.py, 30 fps |
+
+좌측 절반은 up 카메라(위에서 내려다봄), 우측 절반은 side 카메라. mp4 링크를 GitHub UI에서 클릭하면 정상 속도로 재생됩니다.
 
 ---
 
@@ -211,9 +213,7 @@ smolvla-toothpaste-pick/
 │   ├── train_config.json        # 학습 시점 LeRobot config 전체 스냅샷
 │   └── policy_config.json       # SmolVLA policy config (chunk_size 50 등)
 └── inference_results/
-    ├── ep01_20260325_090611.mp4 / .gif   # ★ 09:06 세션 ep01 — 성공
-    ├── ep02_20260325_090638.mp4 / .gif   # ★ 09:06 세션 ep02 — 성공
-    └── ep03_20260325_090705.mp4 / .gif   # ★ 09:07 세션 ep03 — 성공
+    └── ep01_20260325_090611.mp4 / .gif   # ★ 2026-03-25 09:06 성공 데모
 ```
 
 > 실제 학습 산출물 (`toothpaste_from_20k/checkpoints/{20000, 25000, last}/pretrained_model/model.safetensors`, 각 ~865 MB) 과 데이터셋 (~ 1.1 GB) 은 git에 포함하지 않았습니다.
