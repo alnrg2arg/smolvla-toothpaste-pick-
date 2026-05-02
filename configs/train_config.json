@@ -1,7 +1,7 @@
 {
     "dataset": {
-        "repo_id": "local/toothpaste_grasp_v2",
-        "root": "/DATA/jeonghwanlee/lerobot/toothpaste_grasp_v2",
+        "repo_id": "local/toothpaste_grasp",
+        "root": "/DATA/jeonghwanlee/lerobot/toothpaste_grasp",
         "episodes": null,
         "image_transforms": {
             "enable": false,
@@ -181,12 +181,12 @@
         "compile_model": false,
         "compile_mode": "max-autotune"
     },
-    "output_dir": "outputs/train/toothpaste_v2_from_20k",
+    "output_dir": "/DATA/jeonghwanlee/lerobot/outputs/train/toothpaste_from_20k",
     "job_name": "smolvla",
     "resume": false,
     "seed": 1000,
     "num_workers": 4,
-    "batch_size": 32,
+    "batch_size": 16,
     "steps": 30000,
     "eval_freq": 20000,
     "log_freq": 200,

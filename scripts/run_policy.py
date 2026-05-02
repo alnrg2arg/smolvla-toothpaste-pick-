@@ -18,10 +18,10 @@ import torch
 import numpy as np
 
 # ─── 모델 선택 ────────────────────────────────────────────────────────────────
-# chamborgir/smolvla_pickplace_20k 기반 + toothpaste_grasp 32에피소드 30k steps 파인튜닝
+# chamborgir/smolvla_pickplace_20k 기반 + toothpaste_grasp (51 ep) 30K step LoRA 파인튜닝
 # 카메라 키: "camera1" (up, index=1) + "camera2" (side, index=0)
-POLICY_PATH     = "outputs/train/toothpaste_v2_from_20k/checkpoints/last/pretrained_model"
-NORM_STATS_PATH = "outputs/train/toothpaste_v2_from_20k/checkpoints/last/pretrained_model"
+POLICY_PATH     = "outputs/train/toothpaste_from_20k/checkpoints/last/pretrained_model"
+NORM_STATS_PATH = "outputs/train/toothpaste_from_20k/checkpoints/last/pretrained_model"
 # ─────────────────────────────────────────────────────────────────────────────
 
 # ─── 카메라 설정 ──────────────────────────────────────────────────────────────
